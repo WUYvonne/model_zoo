@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021-12-18 22:21
 # @Author  : wuyingwen
-# @Contact : wuyw02@zenmen.com
+# @Contact : wuyingwen66@163.com
 
 import pandas as pd
 import numpy as np
@@ -10,18 +10,18 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 import matplotlib.pyplot as plt
-
+import os
 
 # 读取数据
-df_user = pd.read_csv("/Users/wuyw02/PycharmProjects/model_zoo/DSSM/data/users.dat",
+df_user = pd.read_csv(os.getcwd() + "/data/users.dat",
                      sep="::", header=None, engine="python",
                      names="UserID::Gender::Age::Occupation::Zip-code".split("::"))
 
-df_movie = pd.read_csv("/Users/wuyw02/PycharmProjects/model_zoo/DSSM/data/movies.dat",
+df_movie = pd.read_csv(os.getcwd() + "/data/movies.dat",
                      sep="::", header=None, engine="python",
                      names="MovieID::Title::Genres".split("::"))
 
-df_rating = pd.read_csv("/Users/wuyw02/PycharmProjects/model_zoo/DSSM/data/ratings.dat",
+df_rating = pd.read_csv(os.getcwd() + "/data/ratings.dat",
                      sep="::", header=None, engine="python",
                      names="UserID::MovieID::Rating::Timestamp".split("::"))
 
