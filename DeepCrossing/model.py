@@ -8,7 +8,7 @@ import tensorflow as tf
 from tensorflow.keras import Model
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras.layers import Embedding, Dense, Dropout, Input
-from layers import Res_layer
+from DeepCrossing.layers import Res_layer
 
 class Deep_Crossing(Model):
 	def __init__(self, feature_columns, hidden_units, embed_reg=1e-6):
